@@ -2,7 +2,7 @@
 
 <One sentence: what this repo does.>
 
-Owner: <mine | someone else's>
+Owner: <GitHub account or org> (<personal | work>)
 
 Setup and run: see the [README](README.md).
 

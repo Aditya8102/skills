@@ -36,8 +36,8 @@ skills() {  # skills DIR: link each skill into DIR, or with --remove delete thos
     target=$1/$(basename "$skill")
     if [ "$mode" = --remove ]; then
       if [ "$(readlink "$target")" = "$skill" ]; then rm "$target"; fi
-    elif [ -e "$target" ] && [ ! -L "$target" ]; then
-      echo "  skipped $target: a different skill has that name"
+    elif [ -e "$target" ] && [ "$(readlink "$target")" != "$skill" ]; then
+      echo "  skipped $target: it exists and isn't from this repo"
     else
       ln -sfn "$skill" "$target"
     fi
@@ -50,7 +50,7 @@ case $mode in
 esac
 
 if [ -d "$HOME/.cursor" ]; then
-  echo "Cursor: rule in $plugin, skills in $HOME/.agents/skills"
+  echo "Cursor: $plugin, $HOME/.agents/skills"
   rm -rf "$plugin"
   [ "$mode" = --remove ] || { mkdir -p "$plugin" && cp -R "$repo/.cursor-plugin" "$repo/rules" "$plugin/"; }
   skills "$HOME/.agents/skills"
@@ -58,7 +58,7 @@ fi
 for entry in "${agents[@]}"; do
   IFS='|' read -r name home rule_file skills_dir <<< "$entry"
   [ -d "$home" ] || continue
-  echo "$name: rule in $rule_file, skills in $skills_dir"
+  echo "$name: $rule_file, $skills_dir"
   if [ "$mode" = --remove ]; then drop_rule "$rule_file"; else put_rule "$rule_file"; fi
   skills "$skills_dir"
 done

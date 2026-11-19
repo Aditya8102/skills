@@ -5,7 +5,7 @@ description: Kanso style for docs, comments and code review. Use when writing or
 
 # Kanso style
 
-The six rules are in the always-on Kanso rule. This skill says how they look on the page.
+The six rules are in the always-on rule. This skill says how they look on the page.
 For writing or reviewing code beyond style, read [practices.md](practices.md).
 
 Called as `/kanso review <path>`, review it against [Review](#review). Called as `/kanso <path>`, rewrite it in this style.
@@ -13,10 +13,9 @@ Called as `/kanso review <path>`, review it against [Review](#review). Called as
 ## Writing
 
 - Sentences under 25 words. Define a term once, then use only that term.
-- Tables for facts, Mermaid for flows, images for examples.
+- Images for examples.
 - Every line answers a question a reader has. Cut the rest.
-- Link to the one place a fact lives instead of repeating it.
-- A unit on every number. A path or command in backticks.
+- A path or command in backticks.
 - No filler: robust, seamless, leverage, comprehensive, utilize, streamline, delve, cutting-edge.
 
 ## README shape
@@ -28,7 +27,7 @@ Only sections that have content, in this order:
 3. What it does: a table, one row per feature or check.
 4. Usage and outputs: options, output format, an example.
 5. Layout: a tree with one line per entry.
-6. Contributing: the check command and a link to the style.
+6. Contributing: links to the check in `AGENTS.md` and to the style.
 
 ## Docs layout
 
@@ -46,5 +45,5 @@ Only sections that have content, in this order:
 
 ## Review
 
-Report each finding as: Kanso rule or practice broken, `file:line`, the fix in one sentence.
+Report each finding as: rule or practice broken, `file:line`, the fix in one sentence.
 Order by impact. Skip anything a formatter or linter already enforces.

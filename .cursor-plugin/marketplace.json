@@ -4,8 +4,7 @@
   "plugins": [
     {
       "name": "aditya-skills",
-      "source": "./",
-      "description": "Kanso house style: an always-on rule plus skills for docs, reviews and repo work."
+      "source": "./"
     }
   ]
 }

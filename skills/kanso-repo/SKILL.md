@@ -1,6 +1,6 @@
 ---
 name: kanso-repo
-description: Routine for repo work in any situation, such as starting a new repo, joining an unfamiliar one, implementing a change, restructuring, fixing a bug, contributing to someone else's repo, or finishing up. Use at the start of repo-level work or when the user says "new repo", "onboard me", "explain this repo", "restructure", "plan this" or "contribute".
+description: Routine for repo work in any situation, such as starting a new repo, joining an unfamiliar one, implementing a change, restructuring, fixing a bug, contributing to someone else's repo, or finishing up. Use at the start of repo-level work or when the user says "new repo", "onboard me", "explain this repo", "restructure" or "contribute".
 ---
 
 # Kanso repo routine
@@ -12,7 +12,7 @@ If the user names one, as in `/kanso-repo join`, use it.
 | --- | --- |
 | New repo | Empty folder, or "start a repo" |
 | Join | Unfamiliar repo, "explain", "onboard me" |
-| Change | A feature or edit in a repo I know |
+| Change | A feature or edit in my repo |
 | Restructure | Layout, tooling, or changes across many files |
 | Bug | Wrong output, an error, a failing check |
 | Contribute | A repo I don't own |
@@ -22,7 +22,7 @@ Every situation ends with [Finish](#finish).
 ## New repo
 
 1. Ask the goal, who uses it first, and what is out of scope.
-2. Create only what the first working version needs: README, `AGENTS.md` from [AGENTS.template.md](AGENTS.template.md), the code, a locked dependency file, formatter and linter config, `.gitignore`.
+2. Create only what the first working version needs: README, `AGENTS.md` from [AGENTS.template.md](AGENTS.template.md), the code, and, if the code needs them, a locked dependency file, formatter and linter config, `.gitignore`.
 3. Make the main command work end to end before adding structure.
 4. Commit once it runs.
 
@@ -71,4 +71,4 @@ Only in my repos.
 - Show the evidence: commands run and their results.
 - Review the diff and anything written outside the repo: no debug leftovers, no unrelated changes.
 - Say in one or two lines what was not checked and what could break.
-- If a rule would have prevented a problem in this session, suggest one line for the Kanso rule.
+- If a rule would have prevented a problem in this session, suggest one line for the always-on rule (`rules/kanso.mdc` in the skills repo).

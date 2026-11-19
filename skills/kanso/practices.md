@@ -1,7 +1,5 @@
 # Engineering practices
 
-The repo's `AGENTS.md` overrides any line here.
-
 ## Simplicity
 
 - Build what is required now, not what might be required later.
@@ -14,7 +12,7 @@ The repo's `AGENTS.md` overrides any line here.
 
 - Never duplicate business logic, configuration, constants or validation rules. One authoritative definition each.
 - Remove duplicated knowledge, not every repeated line. Code that looks alike but encodes different rules stays separate.
-- Rule of three: the first copy is fine, the second deserves attention, the third gets extracted.
+- Unsure whether two look-alikes encode one rule: wait for a third before extracting.
 - Don't recompute a value you already have.
 
 ## Names and variables
