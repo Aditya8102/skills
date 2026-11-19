@@ -41,7 +41,7 @@ To give a repo its own facts, copy `skills/kanso-repo/AGENTS.template.md` into i
 | Companion | Skills Kanso calls | Called in | Installed as |
 | --- | --- | --- | --- |
 | [ponytail](https://github.com/DietrichGebert/ponytail) (MIT) | `ponytail-review`, `ponytail-audit`, `ponytail-debt` | Finish; Restructure proposal; Restructure final pass | Linked like the kit's own skills |
-| [EGM](https://github.com/google/elephant-goldfish-model) (Apache-2.0) | `egm-draft`, `egm-review`, `egm-drift-report` | Restructure proposal and final pass | Cursor: local plugin. Codex and Claude Code: their own plugin command, EGM's latest release. Gemini CLI: none |
+| [EGM](https://github.com/google/elephant-goldfish-model) (Apache-2.0) | `egm-brainstorm`, `egm-draft`, `egm-review`, `egm-drift-report` | New repo; Restructure proposal and final pass | Cursor: local plugin. Codex and Claude Code: their own plugin command, EGM's latest release. Gemini CLI: none |
 
 Ponytail's always-on mode is left out, because the rule and the Change routine already cover it. Without a companion, the skill does that step by hand.
 

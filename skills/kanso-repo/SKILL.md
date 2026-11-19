@@ -22,7 +22,7 @@ Every situation ends with [Finish](#finish).
 
 ## New repo
 
-1. Ask the goal, who uses it first, and what is out of scope.
+1. Ask the goal, who uses it first, and what is out of scope. If the goal is still unclear, work it out with `egm-brainstorm`.
 2. Create only what the first working version needs: README, `AGENTS.md` from [AGENTS.template.md](AGENTS.template.md), the code, and, if the code needs them, a locked dependency file, formatter and linter config, `.gitignore`.
 3. Make the main command work end to end before adding structure.
 4. Commit once it runs.
