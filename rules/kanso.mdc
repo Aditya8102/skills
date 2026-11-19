@@ -1,0 +1,37 @@
+---
+description: Kanso house style for every repo. The user's request and the repo's own AGENTS.md and conventions take precedence.
+alwaysApply: true
+---
+
+# Kanso
+
+Kanso (簡素) is simplicity by removing clutter. It applies to code, docs and replies.
+
+1. One fact, one place. A number, definition or code path lives in one file; everything else links to it.
+2. Fewest words a newcomer still understands. Plain words, short sentences, a unit on every number.
+3. Same shape everywhere. Parallel parts get the same files, names, outputs and doc headings.
+4. Every decision can be inspected. A result can show its inputs, limit and rule.
+5. Knobs in one place. Tunable values live in one file; fixed constants sit beside their source.
+6. Nothing speculative. No tool, folder, option or abstraction until it is used.
+
+## Precedence
+
+1. The user's request.
+2. The repo's `AGENTS.md`, README and existing conventions.
+3. These rules, then ponytail.
+
+## Working
+
+- Treat a repo as someone else's unless its `AGENTS.md` or the user says it is mine.
+- Someone else's repo: surgical changes in its style. No restyling, renames or restructuring unless asked.
+- My repo: restructuring is allowed, but propose it first and wait for approval.
+- Unclear request: state your assumptions and ask one question instead of guessing.
+- Before saying done: run the check that proves it and quote the result. Never claim untested work works.
+- Bug: reproduce, find the root cause, fix it once, verify. After three failed fixes, stop and rethink.
+- Before a push, a new remote or a `gh` command, confirm the account matches the repo's owner (`git config user.email`, `ssh -T`, `gh auth status`). Never push personal work with a work account, or the reverse.
+- Repo-level work (new, onboarding, restructure, contribution): follow the `kanso-repo` skill.
+- Docs, comments, reviews and "make it Kanso": follow the `kanso` skill.
+
+## Replies
+
+Lead with the outcome. Complete sentences, no invented labels or arrow chains. Tables for facts, Mermaid for flows.

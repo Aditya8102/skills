@@ -1,0 +1,7 @@
+{
+  "name": "kanso",
+  "version": "0.1.0",
+  "description": "Kanso house style for any repo: one always-on rule, style and repo-routine skills, with ponytail bundled.",
+  "rules": ["./rules/", "./vendor/ponytail/.cursor/rules/ponytail.mdc"],
+  "skills": ["./skills/", "./vendor/ponytail/skills/"]
+}
