@@ -35,7 +35,7 @@ To give a repo its own facts, copy `skills/kanso-repo/AGENTS.template.md` into i
 
 ## Dependencies
 
-None to use it: everything is Markdown. Cloning needs `git`; `install.sh` needs only `bash`.
+None to use it: everything is Markdown. Cloning needs `git`; `install.sh` needs only `bash` and standard Unix tools.
 
 Optional companions, installed separately:
 
