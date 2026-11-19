@@ -40,6 +40,7 @@
 
 - Validate at system boundaries. Fail early with a specific exception and a clear message.
 - Never swallow errors. Don't catch broad exceptions to hide bugs.
+- Never trade validation at trust boundaries, error handling that prevents data loss, or security for a smaller change.
 - Logging, not scattered prints, unless stdout is the product. No secrets in logs.
 
 ## Tests

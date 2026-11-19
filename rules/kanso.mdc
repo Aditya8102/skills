@@ -18,7 +18,7 @@ Kanso (簡素) is simplicity by removing clutter. It applies to code, docs and r
 
 1. The user's request.
 2. The repo's `AGENTS.md`, README and existing conventions.
-3. These rules, then any other installed style skill such as ponytail.
+3. These rules, then any other installed style skill.
 
 ## Working
 
@@ -29,7 +29,8 @@ Kanso (簡素) is simplicity by removing clutter. It applies to code, docs and r
 - Before saying done: run the check that proves it and quote the result. Never claim untested work works.
 - Before a push, a new remote or a `gh` command, confirm the active account matches the repo's owner (`git config user.email`, `ssh -T`, `gh auth status`). Never push personal work with a work account, or the reverse.
 - Repo work (new, join, change, restructure, bug, contribute): follow the `kanso-repo` skill.
-- Docs, comments, reviews and "make it Kanso": follow the `kanso` skill.
+- Docs, comments, style reviews and "make it Kanso": follow the `kanso` skill.
+- Code review (bugs, safety, tests): `ponytail-review`. Whole-repo audit: `ponytail-audit`.
 
 ## Replies
 

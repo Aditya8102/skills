@@ -7,6 +7,7 @@ description: Routine for repo work in any situation, such as starting a new repo
 
 Read the repo's `AGENTS.md` first if it exists. Then pick the situation and follow its steps.
 If the user names one, as in `/kanso-repo join`, use it.
+A step that names a companion skill (`ponytail-*`, `egm-*`) that isn't installed: do it by hand and say so.
 
 | Situation | Signal |
 | --- | --- |
@@ -38,7 +39,7 @@ Read only. No edits until asked.
 ## Change
 
 1. Restate the goal and how success will be checked.
-2. Make the smallest complete change: reuse what exists, add nothing that wasn't asked for, and finish every caller it touches.
+2. Make the smallest complete change: reuse what the repo has, then the standard library, then an installed dependency. Add nothing that wasn't asked for, and finish every caller it touches.
 3. Run the repo's checks and the main command on a real input.
 4. Update the one doc that describes the changed behavior.
 
@@ -47,10 +48,10 @@ Read only. No edits until asked.
 Only in my repos.
 
 1. Baseline: record current outputs on real inputs, outside the repo, so later phases can be compared exactly.
-2. Proposal: current state, target layout, what moves where, phases, risks and open decisions. If EGM is installed, draft with `egm-draft` and review with `egm-review`.
+2. Proposal: start from a `ponytail-audit`, then write the current state, target layout, what moves where, phases, risks and open decisions. Draft it with `egm-draft` and review it with `egm-review`.
 3. Wait for approval.
 4. Implement one phase at a time. After each phase, compare with the baseline and commit.
-5. Final pass: docs, links and dead code, then a `kanso` review.
+5. Final pass: `egm-drift-report` for docs against code, `ponytail-debt` for open shortcuts, dead code, then a `kanso` review.
 
 ## Bug
 
@@ -69,6 +70,6 @@ Only in my repos.
 ## Finish
 
 - Show the evidence: commands run and their results.
-- Review the diff and anything written outside the repo: no debug leftovers, no unrelated changes.
+- If code changed, review the diff with `ponytail-review`. Check the diff and anything written outside the repo for debug leftovers and unrelated changes.
 - Say in one or two lines what was not checked and what could break.
 - If a rule would have prevented a problem in this session, suggest one line for the always-on rule (`rules/kanso.mdc` in the skills repo).

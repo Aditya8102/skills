@@ -14,6 +14,7 @@ bash -n install.sh
 
 ## Decisions
 
-- No dependencies. Companions such as ponytail and EGM are installed separately, never bundled.
+- Companions are pinned in `install.sh`, and every skill installed from them is called by a named step in the rule or a skill. A companion skill that no step calls gets removed.
+- Ponytail's always-on mode is left out: the rule and the Change routine already cover it.
 - `rules/kanso.mdc` is the only copy of the rule. `install.sh` copies it out and never edits it.
-- The README's per-agent table mirrors the `agents` table in `install.sh`. Change both together.
+- The README's agent and companion tables mirror the `agents` and `companions` tables in `install.sh`. Change both together.
