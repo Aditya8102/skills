@@ -7,7 +7,7 @@ Owner: mine
 Check before every commit:
 
 ```sh
-pip install skills-ref
+pip install skills-ref==0.1.1
 for s in skills/*/; do agentskills validate "$s"; done
 bash -n install.sh
 ```

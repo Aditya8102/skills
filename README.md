@@ -15,7 +15,7 @@ The kit is one rule and a few skills. Everything else only loads them into agent
 | `/kanso review <path>` | Kanso review: each finding with the rule, `file:line` and the fix |
 | `/kanso <path>` | Rewrite a doc or comments in Kanso style |
 
-Agents also pick a skill on their own when a task matches its description. In Codex, type `$kanso-repo` instead of `/kanso-repo`.
+Agents also pick a skill on their own when a task matches its description. In Codex, type `$kanso-repo` instead of `/kanso-repo`. Gemini CLI has no skill commands, so ask in words, such as "use kanso-repo to join this repo".
 
 ## What's inside
 
@@ -56,7 +56,7 @@ Then restart your agents. `install.sh` sets up each agent it finds:
 | Cursor | `~/.cursor` | Local plugin in `~/.cursor/plugins/local/aditya-skills` | `~/.agents/skills` |
 | Codex | `~/.codex` | Block in `~/.codex/AGENTS.md` | `~/.agents/skills` |
 | Claude Code | `~/.claude` | Block in `~/.claude/CLAUDE.md` | `~/.claude/skills` |
-| Gemini CLI | `~/.gemini` | Block in `~/.gemini/GEMINI.md` | `~/.gemini/skills` |
+| Gemini CLI | `~/.gemini` | Block in `~/.gemini/GEMINI.md` | `~/.agents/skills` |
 
 The rule block sits between `<!-- aditya-skills:start -->` and `<!-- aditya-skills:end -->`. Anything else in those files stays untouched.
 
@@ -77,7 +77,7 @@ cd ~/skills && git pull && ./install.sh
 ## Add a skill
 
 1. Create `skills/<name>/SKILL.md` with `name: <name>` and a `description` that says what it does and when to use it.
-2. Validate it: `pip install skills-ref`, then `agentskills validate skills/<name>`.
+2. Validate it: `pip install skills-ref==0.1.1`, then `agentskills validate skills/<name>`.
 3. Run `./install.sh` and commit.
 
 Guidance that applies to every chat goes in `rules/kanso.mdc`. Everything else is a skill.
@@ -92,4 +92,4 @@ Copy `skills/kanso-repo/AGENTS.template.md` into the repo as `AGENTS.md` and fil
 ~/skills/install.sh --remove
 ```
 
-It deletes only what `install.sh` added: the rule blocks, the skill links and the Cursor plugin.
+It deletes the rule blocks, the skill links and the Cursor plugin. Empty folders stay, and a rule file is deleted if nothing else is left in it.

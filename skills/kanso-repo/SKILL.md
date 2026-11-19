@@ -31,7 +31,7 @@ Every situation ends with [Finish](#finish).
 Read only. No edits until asked.
 
 1. Read the README, `AGENTS.md`, dependency files, entry points, CI config and recent `git log`.
-2. Run setup and the main command if it is safe. Note what fails.
+2. Run setup, the repo's check and the main command. Point anything that writes outside the repo at a temp folder or venv, or skip it and say why. Note what fails.
 3. Reply with a one-page map: what it does, how to run it, a layout tree with one line per entry, where the knobs live, and open questions.
 4. If `AGENTS.md` is missing, offer to write one from the template.
 
@@ -69,6 +69,6 @@ Only in my repos.
 ## Finish
 
 - Show the evidence: commands run and their results.
-- Review the diff: no debug leftovers, no unrelated changes.
+- Review the diff and anything written outside the repo: no debug leftovers, no unrelated changes.
 - Say in one or two lines what was not checked and what could break.
-- If a rule would have prevented a problem in this session, suggest one line for the kit.
+- If a rule would have prevented a problem in this session, suggest one line for the Kanso rule.

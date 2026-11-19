@@ -4,17 +4,19 @@ set -euo pipefail
 
 repo=$(cd "$(dirname "$0")" && pwd)
 mode=${1:-}
-start='<!-- aditya-skills:start -->'
-end='<!-- aditya-skills:end -->'
-plugin=$HOME/.cursor/plugins/local/aditya-skills
+kit=aditya-skills
+start="<!-- $kit:start -->"
+end="<!-- $kit:end -->"
+plugin=$HOME/.cursor/plugins/local/$kit
 #        agent        home            always-on file             skills folder
 agents=("Codex|$HOME/.codex|$HOME/.codex/AGENTS.md|$HOME/.agents/skills"
         "Claude Code|$HOME/.claude|$HOME/.claude/CLAUDE.md|$HOME/.claude/skills"
-        "Gemini CLI|$HOME/.gemini|$HOME/.gemini/GEMINI.md|$HOME/.gemini/skills")
+        "Gemini CLI|$HOME/.gemini|$HOME/.gemini/GEMINI.md|$HOME/.agents/skills")
 
 drop_rule() {  # drop_rule FILE: delete the rule block, and the file if nothing else is left
   [ -f "$1" ] || return 0
-  sed -i.bak "/$start/,/$end/d" "$1" && rm "$1.bak"
+  # cat > writes through a symlinked file (dotfiles); sed -i would replace the link
+  sed "/$start/,/$end/d" "$1" > "$1.tmp" && cat "$1.tmp" > "$1" && rm "$1.tmp"
   [ -s "$1" ] || rm "$1"
 }
 
