@@ -8,6 +8,8 @@ description: Kanso style for docs, comments and code review. Use when writing or
 The six rules are in the always-on Kanso rule. This skill says how they look on the page.
 For writing or reviewing code beyond style, read [practices.md](practices.md).
 
+Called as `/kanso review <path>`, review it against [Review](#review). Called as `/kanso <path>`, rewrite it in this style.
+
 ## Writing
 
 - Sentences under 25 words. Define a term once, then use only that term.
@@ -40,7 +42,7 @@ Only sections that have content, in this order:
 - Function: a one-line `input -> output` docstring.
 - Constant: `NAME = value  # meaning; source`.
 - Comment only the why the code cannot show. No comment that restates the code.
-- No commented-out code. A known shortcut gets ponytail's `shortcut: <limit>, <when to upgrade>` comment.
+- No commented-out code. A known shortcut gets a `shortcut: <limit>, <when to upgrade>` comment.
 
 ## Review
 

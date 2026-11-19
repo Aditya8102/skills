@@ -6,6 +6,7 @@ description: Routine for repo work in any situation, such as starting a new repo
 # Kanso repo routine
 
 Read the repo's `AGENTS.md` first if it exists. Then pick the situation and follow its steps.
+If the user names one, as in `/kanso-repo join`, use it.
 
 | Situation | Signal |
 | --- | --- |
@@ -37,7 +38,7 @@ Read only. No edits until asked.
 ## Change
 
 1. Restate the goal and how success will be checked.
-2. Make the smallest complete change (ponytail).
+2. Make the smallest complete change: reuse what exists, add nothing that wasn't asked for, and finish every caller it touches.
 3. Run the repo's checks and the main command on a real input.
 4. Update the one doc that describes the changed behavior.
 

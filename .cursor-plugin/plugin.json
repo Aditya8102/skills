@@ -1,7 +1,8 @@
 {
-  "name": "kanso",
-  "version": "0.1.0",
-  "description": "Kanso house style for any repo: one always-on rule, style and repo-routine skills, with ponytail bundled.",
-  "rules": ["./rules/", "./vendor/ponytail/.cursor/rules/ponytail.mdc"],
-  "skills": ["./skills/", "./vendor/ponytail/skills/"]
+  "name": "aditya-skills",
+  "version": "1.0.0",
+  "description": "Kanso house style: an always-on rule plus skills for docs, reviews and repo work.",
+  "author": { "name": "Aditya Sinha" },
+  "repository": "https://github.com/Aditya8102/skills",
+  "license": "MIT"
 }
